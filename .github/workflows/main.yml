@@ -19,6 +19,7 @@ jobs:
           port: ${{ secrets.PORT }}
           script_stop: true
           script: |
+            sudo su -
             cd /opt/my_site
             sudo git pull
             sudo nginx -s reload
